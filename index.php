@@ -31,7 +31,7 @@
         <?php foreach($skolotaji as $skolotajs): ?>
                 <h3 class="card-header"><?php echo $skolotajs['vards']; ?></h3>
                 <p class="card-text m-3"><?php echo $skolotajs['prieksmeti']; ?></p>
-                <a href="post.php?id=<?php echo $skolotajs['id']; ?>">Atsauksmes</a>
+                <a href="atsauksmes.php?id=<?php echo $skolotajs['id']; ?>">Atsauksmes</a>
             </div>
         <?php endforeach; ?>
     </div>
