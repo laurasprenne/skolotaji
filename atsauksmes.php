@@ -1,5 +1,5 @@
 <?php
-$id = 1;
+$id=1;
 if (isset($_GET['id'])){
     $id = $_GET['id'];
 }
@@ -9,7 +9,7 @@ require('config/db.php');
     // echo '1';
 
  if(isset($_POST['delete'])){
-    $delete_id = $_POST['delete_id'];
+    $delete_id=$_POST["delete_id"];
     
     $query = "DELETE FROM atsauksmes WHERE id='$delete_id'";
     
@@ -17,7 +17,7 @@ require('config/db.php');
     // echo $query;
     
     if(mysqli_query($conn, $query)){
-        header('Location: http://localhost/Skolotaji/');
+        header('Location: http://localhost/skolotaji/');
     }
     else{
         echo 'FATAL ERROR: '. mysql_error($conn);
@@ -61,8 +61,23 @@ mysqli_close($conn);
 
 <html lang="en">
 <head>
-    <title>Skolotāju atsauksmes</title>
+    <title>PHP BLOG</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+    <style>
+        a{
+            text-decoration:none;
+            color:purple;
+        }
+        img{
+            height:300px;
+            margin:20px
+        }
+        body {
+            font-family: monospace;
+            margin: 40px;
+        }
+    </style>
 </head>
 <body class="m-5">
     <div>
